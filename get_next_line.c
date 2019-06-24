@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 14:42:25 by dlinde            #+#    #+#             */
-/*   Updated: 2019/06/21 16:48:02 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/06/24 14:34:40 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ static int		ft_line(char **s, char **line, int fd, int red)
 		n++;
 	if (s[fd][n] == '\n')
 	{
-		n += 1;
 		*line = ft_strsub(s[fd], 0, n);
-		tmp = ft_strdup(s[fd] + n);
+		tmp = ft_strdup(s[fd] + n + 1);
 		ft_strdel(&s[fd]);
 		s[fd] = tmp;
 		if (s[fd][0] == '\0')
