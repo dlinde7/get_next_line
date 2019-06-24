@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 14:42:25 by dlinde            #+#    #+#             */
-/*   Updated: 2019/06/24 14:34:40 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/06/24 14:40:56 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int				get_next_line(const int fd, char **line)
 	static char		*s[200];
 	int				red;
 
-	if (fd < 0 || line == NULL || read(fd, buff, 0))
+	if (fd < 0 || line == NULL || read(fd, buff, 0) < 0)
 		return (-1);
 	if (s[fd] == NULL)
 		s[fd] = ft_strnew(0);
