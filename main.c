@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 15:57:13 by dlinde            #+#    #+#             */
-/*   Updated: 2019/06/21 16:23:59 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/02 15:49:39 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int argc, char **argv)
 		fd = open(argv[1], O_RDONLY);
 	while (get_next_line(fd, &line) == 1)
 	{
-		ft_putstr(line);
+		ft_putendl(line);
 		free(line);
 	}
 	if (argc == 2)

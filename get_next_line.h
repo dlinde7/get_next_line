@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:54:00 by dlinde            #+#    #+#             */
-/*   Updated: 2019/06/21 16:44:35 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/02 15:49:22 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "./libft/libft.h"
 
-# define BUFF_SIZE	1
+# define BUFF_SIZE	4
 
 int		get_next_line(const int fd, char **line);
 

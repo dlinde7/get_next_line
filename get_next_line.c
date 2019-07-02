@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 14:42:25 by dlinde            #+#    #+#             */
-/*   Updated: 2019/06/24 14:40:56 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/02 15:49:57 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int				get_next_line(const int fd, char **line)
 		tmp = ft_strjoin(s[fd], buff);
 		ft_strdel(&s[fd]);
 		s[fd] = tmp;
-		if (ft_strchr(buff, '\n'))
+		if (ft_strchr(s[fd], '\n'))
 			break ;
 	}
 	if (red < 0)
