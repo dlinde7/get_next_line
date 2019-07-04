@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:32:12 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/24 15:32:31 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/04 13:05:55 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n)
+	if (s)
 	{
-		((unsigned char *)s)[n - 1] = 0;
-		n--;
+		while (n)
+		{
+			((unsigned char *)s)[n - 1] = 0;
+			n--;
+		}
 	}
 }

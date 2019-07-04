@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 14:46:50 by dlinde            #+#    #+#             */
-/*   Updated: 2019/05/28 14:52:19 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/04 12:43:37 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	t_list	*l2;
 
 	l1 = *alst;
-	while (l1)
+	while (l1 && del)
 	{
 		l2 = l1->next;
 		del(l1->content, l1->content_size);
