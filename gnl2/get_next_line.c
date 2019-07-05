@@ -6,7 +6,7 @@
 /*   By: dlinde <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 16:52:38 by dlinde            #+#    #+#             */
-/*   Updated: 2019/07/04 13:00:48 by dlinde           ###   ########.fr       */
+/*   Updated: 2019/07/05 15:45:48 by dlinde           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,20 @@ static char		*add_line(char *file, char *buff)
 
 static char		*ft_line(char *file, char **line)
 {
-	size_t	n;
-	size_t	i;
-	char	*s;
+	int		n;
 	char	*tmp;
 
-	s = ft_strchr(file, '\n');
-	n = ft_strlen(file);
-	i = ft_strlen(s);
-	*line = ft_strsub(file, 0, n - i);
-	if (n == n - i)
+	while (file[n] != '\n' && file[n] != '\0')
+		n++;
+	*line = ft_strsub(file, 0, n);
+	if (file[n] == '\0')
 	{
 		tmp = NULL;
 		ft_strdel(&file);
 	}
 	else
 	{
-		tmp = ft_strsub(file, n - i + 1, i + 1);
+		tmp = ft_strsub(file, n + 1, ft_strlen(file + n) + 1);
 		ft_strdel(&file);
 	}
 	return (tmp);
